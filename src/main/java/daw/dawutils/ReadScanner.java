@@ -103,4 +103,21 @@ public class ReadScanner {
         
         return number;
     }
+    
+    public static String readString() {
+        Scanner sc = new Scanner(System.in);
+        
+        return sc.nextLine();
+    }
+    
+    public static String readString(int min, int max) {
+        Scanner sc = new Scanner(System.in);
+        String string = sc.nextLine();
+        
+        if (string.length() >= min && string.length() <= max) {
+            return string;
+        } else {
+            throw new IllegalArgumentException();
+        }
+    }
 }
